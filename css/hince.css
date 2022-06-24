@@ -1,8 +1,22 @@
 :root{
     --main-color:#a36d6a;
     --font-color-dark:#4E3836;
-
+    --font-color-medium:#a36d6a;
+    --font-color-light: #dbc4c4;
 }
+
+header{
+    height: 0;
+    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2;
+}
+/* top left랑 width, heigt는 왜 0이어야하는지?
+ 어떻게 먹히는건지 설명해주세요 ㅜㅜ  */
+
 
 .logo-header{
     width: 115px;
@@ -58,18 +72,21 @@
 
 .circle p{
     display: none;
+    
 }
 
 .circle:hover p{
     display: block;
     /* display none을 block으로 해준것 */
     color: #fff;
-    font-size: 10px;
-    font-weight: 200;
     overflow: hidden;
     cursor: pointer;
     text-align: center;
     line-height: 20px;
+    /* 높이가 20이라서 가운데 정렬 위해 20px */
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 10px;
 }
 
 .question figure{
@@ -90,7 +107,7 @@
 .header-container{
     display: flex;
     justify-content: space-between;
-    margin: 20px 20px;
+    margin: 20px 20px 50px 20px;
     
 
 }
@@ -104,7 +121,8 @@
     padding-left: 20px;
     display: flex;
     flex-direction: column;
-
+    width: 90px;
+    height: 56px;
 }
 
 .shop-con{
@@ -113,15 +131,11 @@
 }
 
 .shop{
-    display: flex;
-    flex-direction: row;
     margin-bottom: 20px;
-
 }
 
 .shop p{
     font-size: 16px;
-    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
     color: var(--font-color-dark);
 }
 
@@ -149,4 +163,73 @@
     height: 8px;
     border-bottom: 1px solid var(--main-color);
     position: absolute;
+}
+
+.main-nav{
+    padding: 60px;
+    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    z-index: 1; */
+    /* z-index 주면 header가 또 안먹혀요... */
+}
+
+.main-nav h2{
+    font-size: 32px;
+    color: var(--main-color);
+    margin-bottom: 30px;
+
+}
+
+.first-nav{
+    display: flex;
+    
+}
+
+.first-nav li {
+    margin-left: 24px;
+}
+
+.first-nav a{
+   color: var(--font-color-light);
+   font-size: 17px;
+   cursor: pointer;
+
+}
+
+.first-nav a:hover{
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+#suggestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#suggestion figure{
+    background-image: url(../img/01_cat_look_banner_pc_bg.jpg);
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#suggestion h3{
+    font-size: 20px;
+    color: #ffffff;
+    font-family: sans-serif;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#suggestion strong{
+    font-weight: 600;
 }
