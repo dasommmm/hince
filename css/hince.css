@@ -103,8 +103,13 @@
 .shop-wrapper{
     padding-left: 20px;
     display: flex;
-    /* a의 부모에 flex해줘서 한줄 다 선택되는거 없앰 */
     flex-direction: column;
+
+}
+
+.shop-con{
+    display: flex;
+    /* a의 부모에 flex해줘서 한줄 다 선택되는거 없앰 */
 }
 
 .shop{
