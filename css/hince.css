@@ -197,18 +197,24 @@ header{
         text-align: right;
         display: inline-block;
         height: auto;
+        padding: 0;
+        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
     }
     .main-nav h2{
         width: 100%;   
         display: inline-block;
+        margin: 100px 0 20px 0;
     }
     .first-nav{
         width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+
     }
     
     .first-nav a{
-        display: inline;
-
+    
     }
 }
 /* 오른쪽 정렬 어떻게 하죵,,,ㅜㅜ */
@@ -282,11 +288,137 @@ header{
 
 .img-wrapper{
     max-width: 1000px;
-    height: 1000px;
+    max-height: 1000px;
     margin: 0 auto;
+    position: relative;
 /* 이미지 가운데 정렬 하는 법 */
 }
 
 .blue{
     width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+}
+
+.white-circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 22px;
+    font-size: 15px;
+    color: black;
+    border: none;
+    background-color: rgba(255,255,255,0.8);
+    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
+    cursor: pointer;
+}
+
+.one{
+    position: absolute;
+    left: 43%;
+    top: 37%;
+
+}
+
+.two{
+    position: absolute;
+    left: 58%;
+    top: 55%;
+}
+
+.white-circle{
+    transition: 0.5s;
+}
+
+.one:focus,.two:focus{
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+.one:target{
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* 1,2 선택하면 밑에 제품사진 움직이고 동그라미 색 바뀌게
+ 어떻게 해요?? target?? */
+/* button 누르면 어떤 기능이 있게 하는건지? */
+
+
+
+.sale{
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sale-box{
+    flex-basis: 50%;
+    max-width: 50%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    /* a의 relative */
+    
+}
+
+.tone-up{
+    background-image: url(../img/03_rtg_bg_01_pc_mo_tag.jpg);
+    background-size: 480px 200px;
+    margin-right: 20px;
+
+}
+
+.back-img{
+    width: 480px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+    /* z-index: -1; */
+}
+
+.a-link{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.brown{
+    color: white;
+    background-color: var(--main-color);
+    text-align: center;
+    line-height: 20px;
+}
+
+.img-con{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.img-wrapper{
+    position: relative;
+}
+
+.one-2{
+    position: absolute;
+    left: 43%;
+    top: 53%;
+}
+
+.two-2{
+    position: absolute;
+    left: 36%;
+    top: 27%;
 }
