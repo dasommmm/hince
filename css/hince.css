@@ -269,6 +269,8 @@ header{
 
 #moment{
     padding: 150px 10px;
+    background-color: #ffffff;
+
 }
 
 .ment-eng{
@@ -365,8 +367,7 @@ header{
 .tone-up{
     background-image: url(../img/03_rtg_bg_01_pc_mo_tag.jpg);
     background-size: 480px 200px;
-    margin-right: 20px;
-
+    
 }
 
 .back-img{
@@ -375,6 +376,7 @@ header{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    margin-right: 20px;
     /* position: absolute; */
     /* z-index: -1; */
 }
@@ -432,19 +434,36 @@ header{
 
 .tone-up-img{
     background-image: url(../img/03_thumb_01_pc_mo_tag.png);
-    width: 240px;
-    height: 200px;
-    position: absolute;
-    left: 50%;
-    transform: translateY(-50%);
 }
 
 .product-img{
-    /* width: 50%;
-    height: 100%; */
+    width: 50%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    /* width: 240px; */
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(30%);
+    transition: 1s;
+}
+
+.sale-box:hover .product-img{
+    transform: translateX(10%);
+}
+
+#mood{
+    padding: 150px 10px;
+    background-color: #ffffff;
+}
+
+.coral-glow{
+    background-image: url(../img/03_rtg_bg_02_pc_mo_tag.jpg);
+}
+
+.glow-img{
+    background-image: url(../img/03_thumb_02_pc_mo_tag.png);
 }
 
 .one-2{
@@ -457,4 +476,151 @@ header{
     position: absolute;
     left: 36%;
     top: 27%;
+}
+
+.orange-glow{
+    background-image: url(../img/03_rtg_bg_01_pc_mo_tag1.jpg);
+}
+
+.orange-img{
+    background-image: url(../img/03_thumb_01_pc_mo_tag1.png);
+}
+
+.shadow{
+    background-image: url(../img/03_rtg_bg_02_pc_mo_tagsha.jpg);
+}
+
+.shadow-img{
+    background-image: url(../img/03_thumb_02_pc_mo_tagsha2.png);
+
+}
+
+footer{
+    background-color: var(--main-color);
+    padding: 40px 20px 20px 20px;
+    color: #ffffff;
+    /* 딱 반반 나누려면 어떤 속성? */
+}
+
+.row{
+    display: flex;
+    
+}
+
+.footer-left{
+    flex-basis: 50%;
+    max-width: 50%;
+
+}
+
+.footer-right{
+    flex-basis: 50%;
+    max-width: 50%;
+    display: flex;
+
+}
+
+
+.footer-right > *{
+    width: 33.3333%;
+}
+
+.symbol{
+    width: 64px;
+    height: 58px;
+}
+
+.footer-text{
+    font-size: 11px;
+    opacity: 0.65;
+    margin-top: 50px;
+    line-height: 1.5;
+}
+
+.terms{
+    padding: 20px 0;
+}
+
+footer a{
+    color: #ffffff;
+}
+
+.underline{
+    text-decoration: underline;
+}
+
+.none-under:hover{
+    text-decoration: none;
+}
+
+.title-footer{
+    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.number{
+    font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.time{
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.footer-right a{
+    font-size: 11px;
+    opacity: 0.65;
+    font-weight: 500;
+}
+
+.footer-right a:hover{
+    text-decoration: none;
+    opacity: 1;
+}
+
+.Order-Tracking{
+    margin-bottom: 20px;
+}
+
+.icons{
+    display: flex;
+    margin-left: 50%;
+    /* margin-left로 옆으로 가게헤줌 */
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.icons a{
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.insta{
+    background-image: url(../img/instagram_out_w.svg);
+}
+
+.katalk{
+    background-image: url(../img/kakaotalk_out_w.svg);
+}
+
+.twitt{
+    background-image: url(../img/twitter_out_w.svg);
+}
+
+.up{
+    background-image: url(../img/circle_arrow_up_out_w.svg);
+    /* background-color: var(--main-color); */
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    right: 9px;
+    transform: translateY(-35px);
 }
