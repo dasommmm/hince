@@ -482,7 +482,6 @@ footer{
     
 }
 
-
 .footer-left{
     /* display: flex;
     flex-direction: column; */
@@ -498,12 +497,6 @@ footer{
     display: flex;
 
 }
-
-div input{
-    display: none;
-}
-
-
 
 
 .footer-right > *{
@@ -521,14 +514,6 @@ div input{
     opacity: 0.65;
     margin-top: 50px;
     line-height: 1.5;
-}
-
-.footer-text p{
-    color: #ffffff;
-}
-
-.f-text a{
-    display: inline;
 }
 
 .terms{
@@ -558,7 +543,6 @@ footer a{
     margin-bottom: 5px;
 }
 
-
 .number{
     font-family: 'Constantia','Times New Roman','Times','Georgia','나눔명조','Nanum Myeongjo','바탕','Batang',serif;
     font-size: 32px;
@@ -582,7 +566,7 @@ footer a{
     opacity: 1;
 }
 
-.margin{
+.Order-Tracking{
     margin-bottom: 20px;
 }
 
@@ -714,62 +698,6 @@ footer a{
     .product-img{
         top: -20%;
     }
-    footer{
-        padding: 40px 10px 10px 10px;
-    }
-    .symbol-con{
-        width: 40px;
-        height: 36px;
-        margin-bottom: 30px;
-    }
-    .footer-text{
-        margin-top: 15px;
-    }
-    .f-text{
-        display: none;
-    }
-    .row{
-        flex-direction: column-reverse;
-    }
-    .footer-right{
-        flex-direction: column;
-    }
-    .footer-right > *{
-        width: 100%;
-    }
-    .title-footer{
-        display: block;
-        background-color: var(--main-color);
-        width: 100%;
-        position: relative;
-        z-index: 10;
-        font-size: 15px;
-        
-    }
-    .footer-right ul{
-        transform: translateY(-100px);
-        position: absolute;
-        z-index: 9;
-        visibility: hidden;
-    }
-    .nav-wrapper{
-        overflow: hidden;
-    }
-    .nav-wrapper > input:checked + ul{
-        transition: 0.5s;
-        transform: none;
-        visibility: visible;
-        position: static;
-    }
-    .nav-wrapper{
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
-    }
-
-    
-
 }
 /* 오른쪽 정렬 어떻게 하죵,,,ㅜㅜ */
 /* fist nav에 줌 flex-end 렁 wrap 줌*/
-/* 파트너쉽 누르면 위에 살짝 보이는건 어떻게 할까요ㅜㅜㅜ */
