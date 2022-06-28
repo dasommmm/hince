@@ -49,9 +49,5 @@ img{
 
 a{
 	text-decoration: none;
-	/* display: block; */
-}
-
-pre a{
-	display: inline-block;
+	display: block;
 }

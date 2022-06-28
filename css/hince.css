@@ -193,35 +193,6 @@ header{
     
 }
 
-@media screen and (max-width:900px){
-    .main-nav{
-        width: 100%;
-        height: 100%;
-        text-align: right;
-        display: inline-block;
-        height: auto;
-        padding: 0;
-        padding: 0 10px 10px 10px;
-        box-sizing: border-box;
-    }
-    .main-nav h2{
-        width: 100%;   
-        display: inline-block;
-        margin: 100px 0 20px 0;
-    }
-    .first-nav{
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-
-    }
-    
-}
-/* 오른쪽 정렬 어떻게 하죵,,,ㅜㅜ */
-/* fist nav에 줌 flex-end 렁 wrap 줌*/
-
 .first-nav li {
     margin-left: 24px;
 }
@@ -500,6 +471,8 @@ footer{
     padding: 40px 20px 20px 20px;
     color: #ffffff;
     /* 딱 반반 나누려면 어떤 속성? */
+    position: relative;
+    /* talk 포지션 */
 }
 
 .row{
@@ -508,10 +481,13 @@ footer{
 }
 
 .footer-left{
+    /* display: flex;
+    flex-direction: column; */
     flex-basis: 50%;
     max-width: 50%;
-
 }
+/* a자체에 크기 줘서 해결은 했지만
+ 왜 a의 부모에 flex줘도 왜 한줄 다 선택되는거죠? */
 
 .footer-right{
     flex-basis: 50%;
@@ -525,10 +501,11 @@ footer{
     width: 33.3333%;
 }
 
-.symbol{
+.symbol-con{
     width: 64px;
     height: 58px;
 }
+
 
 .footer-text{
     font-size: 11px;
@@ -539,6 +516,11 @@ footer{
 
 .terms{
     padding: 20px 0;
+    display: flex;
+    flex-direction: row;
+}
+.terms > a{
+    margin: 0 5px;
 }
 
 footer a{
@@ -574,6 +556,7 @@ footer a{
     font-size: 11px;
     opacity: 0.65;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .footer-right a:hover{
@@ -623,4 +606,60 @@ footer a{
     position: absolute;
     right: 9px;
     transform: translateY(-35px);
+    
 }
+/* 이거 맞는지 */
+/* flex 반반 하고싶으면 basis나 width주면? */
+/* footer-text html 지저분 */
+
+.talk{
+    background-image: url(../img/hince_channeltalk.png);
+    width: 100px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    top: 93%;
+    right: 50px;
+
+}
+
+@media screen and (max-width:900px){
+    .header-container{
+        margin: 10px 10px 30px 10px;
+    }
+    .shop-wrapper{
+        padding-left: 10px;
+        /*이렇게 하는거 맞나용  ㅠㅠ*/
+    }
+    .shop,.arrow{
+        display: none;
+    }
+    .main-nav{
+        width: 100%;
+        height: 100%;
+        text-align: right;
+        display: inline-block;
+        height: auto;
+        padding: 0;
+        padding: 0 10px 10px 10px;
+        box-sizing: border-box;
+    }
+    .main-nav h2{
+        width: 100%;   
+        display: inline-block;
+        margin: 100px 0 20px 0;
+    }
+    .first-nav{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+    }
+    
+}
+/* 오른쪽 정렬 어떻게 하죵,,,ㅜㅜ */
+/* fist nav에 줌 flex-end 렁 wrap 줌*/
