@@ -733,6 +733,7 @@ footer a{
     }
     .footer-right{
         flex-direction: column;
+        max-width: 100%;
     }
     .footer-right > *{
         width: 100%;
@@ -745,7 +746,15 @@ footer a{
         z-index: 10;
         font-size: 15px;
         padding-top: 18px;
+        margin-bottom: 0;
+        font-weight: 600;
         
+    }
+    .title-footer::after{
+        content: '+';
+        color: #ffffff;
+        position: absolute;
+        right: 0;
     }
     .footer-right ul{
         transform: translateY(-100px);
