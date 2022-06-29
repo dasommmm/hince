@@ -746,30 +746,36 @@ footer a{
         z-index: 10;
         font-size: 15px;
         padding-top: 18px;
+        /* 마진대신 패딩써서 안보이게 가려줌 */
         margin-bottom: 0;
         font-weight: 600;
         
     }
-    .nav-wrapper::after{
+    .after::after{
         content: '+';
         color: #ffffff;
         position: absolute;
         right: 0;
         z-index: 15;
         top: 18px;
-        /* input 뒤에 놔야지 + 썼을때 다음거에 */
+        /* input 뒤에 놔야지 + 썼을때 다음거에 적용됨. 부모로 돌아가진 못함
+        위로는 못간다는 뜻!
+        속성의미 ~그냥 뒤 +바로뒤*/
     }
-    /*nav-wrapper에 주면 partnership에 없음 
-    그래서 partner에 nav-wrapper class줬는데
-     이러면 또  order 펼쳤을때 ul 위에 보여요ㅠㅠ */
+
+    .nav-wrapper > input:checked ~ .after::after{
+        /* transform: rotate(45deg); */
+        content: '-';
+    }
+    /* div를 파트너쉽에는 어떻게 해줄까용 ㅠㅠㅠ
+     기존의 nav-wrapper를 nav-con으로 바꾼후
+    다시div를 더 만들고 nav-wrapper로 class줘서
+     감쌌는데 넘 디브 많아요 이래도 되나요 */
     .footer-right ul{
         transform: translateY(-100px);
         position: absolute;
         z-index: 9;
         visibility: hidden;
-    }
-    .nav-wrapper{
-        overflow: hidden;
     }
     .nav-wrapper > input:checked + ul{
         transition: 0.5s;
@@ -781,14 +787,16 @@ footer a{
         display: flex;
         flex-direction: column;
         /* margin: 10px; */
+        /* 얘때문에 위에 살짝 보이는거 */
         position: relative;
+        overflow: hidden;
     }
     .underline{
         display: inline;
     }
-    
-
 }
+
+    
 /* 오른쪽 정렬 어떻게 하죵,,,ㅜㅜ */
 /* fist nav에 줌 flex-end 렁 wrap 줌*/
 /* 파트너쉽 누르면 위에 살짝 보이는건 어떻게 할까요ㅜㅜㅜ */
