@@ -641,7 +641,7 @@ footer a{
     position: fixed;
     top: 93%;
     right: 50px;
-
+    z-index: 20;
 }
 
 @media screen and (max-width:900px){
@@ -750,12 +750,18 @@ footer a{
         font-weight: 600;
         
     }
-    .title-footer::after{
+    .nav-wrapper::after{
         content: '+';
         color: #ffffff;
         position: absolute;
         right: 0;
+        z-index: 15;
+        top: 18px;
+        /* input 뒤에 놔야지 + 썼을때 다음거에 */
     }
+    /*nav-wrapper에 주면 partnership에 없음 
+    그래서 partner에 nav-wrapper class줬는데
+     이러면 또  order 펼쳤을때 ul 위에 보여요ㅠㅠ */
     .footer-right ul{
         transform: translateY(-100px);
         position: absolute;
@@ -775,8 +781,11 @@ footer a{
         display: flex;
         flex-direction: column;
         /* margin: 10px; */
+        position: relative;
     }
-
+    .underline{
+        display: inline;
+    }
     
 
 }
