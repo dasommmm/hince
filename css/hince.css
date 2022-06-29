@@ -744,6 +744,7 @@ footer a{
         position: relative;
         z-index: 10;
         font-size: 15px;
+        padding-top: 18px;
         
     }
     .footer-right ul{
@@ -764,7 +765,7 @@ footer a{
     .nav-wrapper{
         display: flex;
         flex-direction: column;
-        margin: 10px;
+        /* margin: 10px; */
     }
 
     
